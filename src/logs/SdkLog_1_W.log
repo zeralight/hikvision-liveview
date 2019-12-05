@@ -1,0 +1,51 @@
+[2019-04-15 22:51:59.499][INF] The COM:Core ver is 5.3.6.30, 2018_08_16. Async:1.
+[2019-04-15 22:51:59.499][DBG] CCoreGlobalCtrl::GetHCNetUtilsAPI, new HCNetUtilsAPI SUCC
+[2019-04-15 22:51:59.499][DBG] CCoreGlobalCtrl::GetHCNetUtilsAPI, Init, SUCC, m_pHCNetUtilsAPI[20639072]
+[2019-04-15 22:51:59.499][DBG] CCoreGlobalCtrl::GetHCNetUtilsAPI, m_pHCNetUtilsAPI[20639072]
+[2019-04-15 22:51:59.499][INF] This hcnetsdk ver is 5.3.6.30 Ver 2018_08_16.
+[2019-04-15 22:51:59.499][INF] login dev 192.168.2.25:8000.
+[2019-04-15 22:51:59.701][INF] Private connect 192.168.2.25:8000 sock=648 this=0x5b26184 cmd=0x10000 port=51461
+[2019-04-15 22:51:59.701][INF] LogonDev1 in[192.168.2.25:8000]
+[2019-04-15 22:52:03.519][INF] login dev 192.168.2.25:8000.
+[2019-04-15 22:52:03.720][INF] Private connect 192.168.2.25:8000 sock=668 this=0x5b26768 cmd=0x10000 port=51464
+[2019-04-15 22:52:03.720][INF] LogonDev1 in[192.168.2.25:8000]
+[2019-04-15 22:52:04.638][INF] login dev 192.168.2.25:8000.
+[2019-04-15 22:52:04.836][INF] Private connect 192.168.2.25:8000 sock=676 this=0x5b26d4c cmd=0x10000 port=51465
+[2019-04-15 22:52:04.836][INF] LogonDev1 in[192.168.2.25:8000]
+[2019-04-15 22:52:05.262][DBG] load[C:\Users\hedi2\Desktop\upwork\C++\Win32\Hikvision-LiveView\build\HCNetSDKCom/HCVoiceTalk.dll] succ
+[2019-04-15 22:52:05.263][INF] AbilityAnalyze---Init-- start
+[2019-04-15 22:52:05.265][ERR] AbilityAnalyze---open zip package error, package path C:/Users/hedi2/Desktop/upwork/C++/Win32/Hikvision-LiveView/build/LocalXml.zip
+[2019-04-15 22:52:05.266][INF] The COM:VoiceTalk ver is 5.3.6.30, 2018_08_16.
+[2019-04-15 22:52:05.275][DBG] load[C:\Users\hedi2\Desktop\upwork\C++\Win32\Hikvision-LiveView\build\HCNetSDKCom/HCGeneralCfgMgr.dll] succ
+[2019-04-15 22:52:05.277][INF] The COM:HCGeneralCfgMgr ver is 5.3.6.30, 2018_08_16.
+[2019-04-15 22:52:05.286][DBG] load[C:\Users\hedi2\Desktop\upwork\C++\Win32\Hikvision-LiveView\build\HCNetSDKCom/HCPlayBack.dll] succ
+[2019-04-15 22:52:05.287][INF] The COM:HCPlayback ver is 5.3.6.30, 2018_08_16.
+[2019-04-15 22:52:05.295][DBG] load[C:\Users\hedi2\Desktop\upwork\C++\Win32\Hikvision-LiveView\build\HCNetSDKCom/HCIndustry.dll] succ
+[2019-04-15 22:52:05.296][INF] The COM:HCIndustry ver is 5.3.6.30, 2018_08_16.
+[2019-04-15 22:52:05.303][DBG] load[C:\Users\hedi2\Desktop\upwork\C++\Win32\Hikvision-LiveView\build\HCNetSDKCom/HCDisplay.dll] succ
+[2019-04-15 22:52:05.304][INF] The COM:HCDisplay ver is 5.3.6.30, 2018_08_16.
+[2019-04-15 22:52:05.314][DBG] load[C:\Users\hedi2\Desktop\upwork\C++\Win32\Hikvision-LiveView\build\HCNetSDKCom/HCPreview.dll] succ
+[2019-04-15 22:52:05.315][INF] The COM:Preview ver is 5.3.6.30, 2018_08_16.
+[2019-04-15 22:52:05.323][DBG] load[C:\Users\hedi2\Desktop\upwork\C++\Win32\Hikvision-LiveView\build\HCNetSDKCom/HCAlarm.dll] succ
+[2019-04-15 22:52:05.325][INF] The COM:HCAlarm ver is 5.3.6.30, 2018_08_16.
+[2019-04-15 22:52:05.526][INF] Private connect 192.168.2.25:8000 sock=712 this=0x5b27330 cmd=0x110040 port=51466
+[2019-04-15 22:52:05.755][INF] ID-IP-CHAN[0-192.168.2.25-1] [CPreviewSession::AdjustProtoType] StreamMode[2], StreamProtocol[0xffff]
+[2019-04-15 22:52:05.786][INF] GlobalCtrl load [C:\Users\hedi2\Desktop\upwork\C++\Win32\Hikvision-LiveView\build\PlayCtrl.dll] with sdk path success and get handle[0x79b0000]
+[2019-04-15 22:52:05.787][DBG] ID-IP-CHAN[0-192.168.2.25-1] [CPreviewPlayer::CreatePlayer] create player success, version is[v7.3.5.2c]
+[2019-04-15 22:52:05.788][DBG] ID-IP-CHAN[0-192.168.2.25-1] [CPreviewSession::Start] SUCC
+[2019-04-15 22:52:06.000][INF] Private connect 192.168.2.25:8000 sock=840 this=0x5b27914 cmd=0x30292 port=51468
+[2019-04-15 22:52:06.000][INF] Private connect 192.168.2.25:8000 sock=836 this=0x5b27330 cmd=0x30001 port=51467
+[2019-04-15 22:52:06.262][INF] Private connect 192.168.2.25:8224 sock=840 this=0x5b27914 cmd=0x30001 port=51790
+[2019-04-15 22:52:06.262][DBG] ID-IP-CHAN[0-192.168.2.25-1] [CGetUDPStream::RecPlayData] preview UDP Link port[8224] success pLink[5b27914]
+[2019-04-15 22:52:06.262][DBG] ID-IP-CHAN[0-192.168.2.25-1] [CGetUDPStream::Start] SUC
+[2019-04-15 22:52:06.317][INF] ID-IP-CHAN[0-192.168.2.25-1] [CPreviewPlayer::OpenPlayer] open player[707b0b4] success
+[2019-04-15 22:52:10.106][INF] Private connect 192.168.2.25:8000 sock=1068 this=0x5b27ef8 cmd=0x10100 port=51469
+[2019-04-15 22:52:10.303][INF] StopSendThread threadHandle:0
+[2019-04-15 22:52:13.511][INF] Private connect 192.168.2.25:8000 sock=648 this=0x5b26184 cmd=0x10100 port=51470
+[2019-04-15 22:52:13.722][INF] StopSendThread threadHandle:0
+[2019-04-15 22:52:13.967][INF] Private connect 192.168.2.25:8000 sock=624 this=0x5b26184 cmd=0x10100 port=51471
+[2019-04-15 22:52:14.166][INF] StopSendThread threadHandle:0
+[2019-04-15 22:52:14.184][INF] CTransUnitMgr::UnloadTransUnitLib
+[2019-04-15 22:52:14.184][INF] ID-IP-CHAN[0-192.168.2.25-1] [CPreviewSession::Stop]
+[2019-04-15 22:52:14.184][DBG] ID-IP-CHAN[0-192.168.2.25-1] [CGetUDPStream::CloseLink] preview UDP Link port[8224] closeLink
+[2019-04-15 22:52:14.184][INF] StopSendThread threadHandle:0

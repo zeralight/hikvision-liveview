@@ -1,0 +1,12 @@
+prefix=/c/Users/hedi2/Desktop/upwork/C++/Win32/Hikvision-LiveView/onvif/gsoap-2.8/dist-debug
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: GSoap
+Description: SOAP C Web Services with SSL, ZLIB, DOM
+Version: 2.8
+Requires:
+Libs: -L${libdir} -lgsoapssl
+Libs.private: -Lyes/lib -Lyes/lib -lssl -lcrypto -lz -lm
+Cflags:  -Iyes/include -Iyes/include -DWITH_OPENSSL -DWITH_GZIP -DWITH_DOM -I${includedir}

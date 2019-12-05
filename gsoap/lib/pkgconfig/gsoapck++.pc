@@ -1,0 +1,12 @@
+prefix=/c/Users/hedi2/Desktop/upwork/C++/Win32/Hikvision-LiveView/onvif/gsoap-2.8/dist
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: GSoap
+Description: SOAP C++ Web Services with Cookies Enabled
+Version: 2.8
+Requires:
+Libs: -L${libdir} -lgsoapck++
+Libs.private: -lm
+Cflags:  -DWITH_COOKIES -DWITH_DOM -I${includedir}

@@ -1,0 +1,17 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "g++",
+            "type": "shell",
+            "command": "mingw32-make -j6",
+            //"command": "g++ -I"c:/vcpkg/x64-windows/include" -I"c:/vcpkg/x64-windows-static/include" -I"c:/vcpkg/x86-windows/include" -o main.exe main.cpp -lgdiplus -lgdi32",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

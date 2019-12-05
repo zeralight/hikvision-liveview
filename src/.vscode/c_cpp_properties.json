@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../lib/include/**",
+                "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/**",
+                "C:/boost-mingw/boost_1_69_0/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "DEBUG",
+                "ASCII",
+                "_ASCII",
+                "WITH_OPENSSL"
+            ],
+            "compilerPath": "C:/tools/msys64/mingw64/bin/g++.exe",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

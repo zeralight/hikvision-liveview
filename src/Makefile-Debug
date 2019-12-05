@@ -1,0 +1,110 @@
+SRCS_DEV := main.cpp \
+			util.cpp \
+			globalwin.cpp \
+			win.cpp \
+			bgwin.cpp \
+			trackbars.cpp \
+			cursors.cpp \
+			soap.cpp \
+
+SRCS := $(SRCS_DEV) \
+		soap/soapAdvancedSecurityServiceBindingProxy.cpp \
+		soap/soapDeviceBindingProxy.cpp \
+		soap/soapDeviceIOBindingProxy.cpp \
+		soap/soapImagingBindingProxy.cpp \
+		soap/soapMediaBindingProxy.cpp \
+		soap/soapPTZBindingProxy.cpp \
+		soap/soapPullPointSubscriptionBindingProxy.cpp \
+		soap/soapRemoteDiscoveryBindingProxy.cpp \
+		soap/soapwsddProxy.cpp \
+		soap/wsddClient.cpp \
+		gsoap/plugin/smdevp.c \
+		gsoap/plugin/mecevp.c \
+		gsoap/plugin/threads.c \
+		gsoap/plugin/wsseapi.cpp \
+		gsoap/plugin/wsaapi.c \
+		gsoap/plugin/wsddapi.c
+
+OBJS_DEV := $(patsubst %.cpp, ../build/%.o, $(notdir $(SRCS_DEV)))
+OBJS_DEV := $(patsubst %.c, ../build/%.o, $(OBJS_DEV))
+OBJS := $(patsubst %.cpp, ../build/%.o, $(notdir $(SRCS)))
+OBJS := $(patsubst %.c, ../build/%.o, $(OBJS))
+
+$(info $$OBJS is [${OBJS}])
+
+DEPS := Consumer.h \
+		soap.h
+
+PROG := hikvision-liveview.exe
+
+CXXFLAGS := -DDEBUG -D_DEBUG \
+			-DWITH_OPENSSL \
+			-DWITH_DOM \
+			-DWITH_ZLIB \
+			-DASCII \
+			-Wno-deprecated \
+			-Wno-deprecated-declarations \
+			-std=c++17 \
+			-Wno-deprecated-declarations \
+			-Wa,-mbig-obj \
+			-fPIC \
+			-static-libstdc++ \
+			-static-libgcc \
+			
+INCLUDES := -I ../lib/include \
+			-I soap \
+			-I gsoap/include \
+			-I gsoap/share/gsoap \
+			-I gsoap/share/gsoap/plugin
+			
+LDFLAGS :=  -L ../lib \
+			-L ../gsoap/lib-shared-debug
+			
+LIBS := -lpthread \
+		-lgdiplus \
+		-lgdi32 \
+		-lPlayCtrl \
+		-liphlpapi \
+		-lgsoapssl++-d \
+		-lws2_32 \
+		-lComctl32 \
+		-lboost_program_options-mgw81-mt-x64-1_69 \
+		-lHCNetSDK \
+		-lHCCore \
+		-lcrypto \
+		-lssl \
+		-lz \
+		-lstdc++fs
+
+
+.PHONY: all
+all: ../build/$(PROG)
+compile: $(OBJS)
+
+../build/$(PROG): $(OBJS)
+	g++ $(CXXFLAGS) -o $@ $(OBJS) $(LDFLAGS) $(LIBS)
+
+../build/%.o: %.cpp $(DEPS)
+	g++ $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+../build/%.o: soap/%.cpp
+	g++ $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+../build/%.o: gsoap/share/gsoap/%.cpp
+	g++ $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+../build/%.o: gsoap/share/gsoap/custom/%.cpp
+	g++ $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+../build/%.o: gsoap/share/gsoap/plugin/%.cpp
+	g++ $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+../build/%.o: gsoap/share/gsoap/plugin/%.c
+	g++ $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+clean:
+	rm -fv ../build/*.o
+	rm -fv ../build/$(PROG)
+clean-dev:
+	rm -fv $(OBJS_DEV)
+	rm -fv ../build/$(PROG)
