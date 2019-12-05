@@ -1,4 +1,6 @@
 # Hikvision camera control
+![Screenshot](https://github.com/zeralight/hikvision-liveview/raw/master/screenshot.jpg)
+
 This is a GUI application for streaming a Hikvision Camera and has some other features:
 - PTZ Control
 - Record videos
